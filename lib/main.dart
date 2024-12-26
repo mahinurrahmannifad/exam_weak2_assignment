@@ -35,28 +35,30 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Colors.amber,
           title: Text(widget.title),
           actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.add)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.call)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.add)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.call)),
           ],
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            MyProfileItem(
-              icon: Icons.icecream,
-              message: 'Ice cream is very delicious right?',
-            ),
-            MyProfileItem(
-              icon: Icons.code,
-              message: 'Programming is not boring if you love it',
-            ),
-            MyProfileItem(
-              icon: Icons.egg,
-              message:
-                  'If you submit code directly copy from chatgpt then mark will 0',
-            ),
-          ],
+        body: const SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              MyProfileItem(
+                icon: Icons.icecream,
+                message: 'Ice cream is very delicious right?',
+              ),
+              MyProfileItem(
+                icon: Icons.code,
+                message: 'Programming is not boring if you love it',
+              ),
+              MyProfileItem(
+                icon: Icons.egg,
+                message:
+                    'If you submit code directly copy from chatgpt then mark will 0',
+              ),
+            ],
+          ),
         ));
   }
 }
@@ -74,7 +76,7 @@ class MyProfileItem extends StatelessWidget {
       child: Column(
         children: [
           CircleAvatar(
-            radius: 56,
+            radius: 55,
             backgroundColor: Colors.purple[190],
             child: Icon(
               icon,
@@ -82,7 +84,7 @@ class MyProfileItem extends StatelessWidget {
               size: 72,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Padding(
@@ -90,7 +92,7 @@ class MyProfileItem extends StatelessWidget {
             child: Text(
               message,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ),
         ],
