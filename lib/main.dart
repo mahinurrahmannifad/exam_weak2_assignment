@@ -54,8 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               MyProfileItem(
                 icon: Icons.egg,
-                message:
-                    'If you submit code directly copy from chatgpt then mark will 0',
+                message: 'If you submit code directly copy from chatgpt then mark will 0',
               ),
             ],
           ),
